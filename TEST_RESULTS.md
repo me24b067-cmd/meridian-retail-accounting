@@ -4,8 +4,8 @@ All results below were produced by commands actually run in this environment (ma
 
 ## 1. Automated tests - `npm test`
 ```
-Test Files  6 passed (6)
-     Tests  76 passed (76)
+Test Files  8 passed (8)
+     Tests  90 passed (90)
 ```
 `npx tsc --noEmit` → exit 0 (no type errors). `npm run build` → exit 0 (production build compiled, 20 routes).
 
@@ -18,9 +18,12 @@ Test Files  6 passed (6)
 | `tests/reports.test.ts` | 9 | Trial balance, P&L, Balance Sheet, period filtering, retained-earnings roll-forward, general ledger |
 | `tests/integration.test.ts` | 17 | Full 111-transaction dataset through the normal pipeline, reproducibility, CSV and Excel exports, FX API failure handling |
 
-<details><summary>All 76 test names</summary>
+| `tests/upload.test.ts` | 9 | CSV upload tester logic: same results as the main pipeline, tolerant parsing (BOM, header case, any line endings), wrong-field-count rows, collecting *all* problems with row numbers, financial-year defaults, template, Excel endpoint |
+| `tests/upload-ui.test.tsx` | 5 | Browser UI (jsdom): drag-and-drop box, dropping a valid file, a faulty file, an unusable file, Clear |
 
-**units.test.ts**
+<details><summary>All 90 test names</summary>
+
+**units**
 
 - inventory (perpetual weighted average) > averages cost across purchases at different prices
 - inventory (perpetual weighted average) > sells the last units at exactly the remaining value (no rounding residue)
@@ -35,13 +38,13 @@ Test Files  6 passed (6)
 - GST calculation > rejects a rate on an exempt supply and unknown treatments
 - GST calculation > settles output against input and reports cash payable
 
-**chart.test.ts**
+**chart**
 
 - chart of accounts > has unique codes and valid normal balances
 - chart of accounts > classifies accumulated depreciation as contra-assets
 - chart of accounts > contains every mandatory account
 
-**journal.test.ts**
+**journal**
 
 - journal entry validation > accepts a balanced entry
 - journal entry validation > rejects an unbalanced entry with a clear message
@@ -54,7 +57,7 @@ Test Files  6 passed (6)
 - decimal money > formats rupees with Indian grouping and brackets for negatives
 - decimal money > rejects non-numeric input
 
-**reports.test.ts**
+**reports**
 
 - trial balance, P&L and balance sheet > trial balance is balanced
 - trial balance, P&L and balance sheet > P&L: trading formula
@@ -66,7 +69,7 @@ Test Files  6 passed (6)
 - period filtering > ignores transactions after the reporting date
 - general ledger > aggregates running balances in the normal direction and honours opening balances
 
-**engine.test.ts**
+**engine**
 
 - transaction validation > rejects duplicate transaction IDs
 - transaction validation > rejects invalid account references
@@ -94,7 +97,7 @@ Test Files  6 passed (6)
 - loans > accrued interest receivable is cleared by a later recovery before new income is recognised
 - loans > JOURNAL cannot post to the computed current-year profit account
 
-**integration.test.ts**
+**integration**
 
 - sample dataset through the full pipeline > has at least 60 uniquely identified, described transactions inside the default period
 - sample dataset through the full pipeline > covers every transaction type
@@ -113,6 +116,26 @@ Test Files  6 passed (6)
 - optional FX API never breaks the app > returns unavailable (no throw) on network failure
 - optional FX API never breaks the app > returns unavailable on HTTP errors and malformed bodies
 - optional FX API never breaks the app > parses a valid response (mocked - no live data is claimed)
+
+**upload**
+
+- CSV upload analysis > gives the same statements for the uploaded sample as the main pipeline
+- CSV upload analysis > is tolerant of a BOM, odd header case/spacing, reordered and missing optional columns, and blank lines
+- CSV upload analysis > reports a clear fatal message for missing required columns, empty data and oversized files
+- CSV upload analysis > collects EVERY problem with spreadsheet row numbers instead of stopping at the first
+- CSV upload analysis > handles any line-ending style, including mixed endings, without merging rows
+- CSV upload analysis > reports rows with the wrong number of fields (never guesses) and keeps true spreadsheet row numbers across blank lines
+- CSV upload analysis > derives the financial year(s) from the dates and honours a requested period
+- CSV upload analysis > serves a blank template that is itself a valid, balancing file
+- CSV upload analysis > builds an Excel file for a valid upload and rejects bad ones without storing anything
+
+**upload-ui**
+
+- Upload & Test CSV (browser UI) > shows the drag-and-drop box and the helper buttons before any file is loaded
+- Upload & Test CSV (browser UI) > dropping a valid file shows balanced statements, the checks and the download buttons
+- Upload & Test CSV (browser UI) > dropping a file with mistakes lists every problem with its row number and shows no statements
+- Upload & Test CSV (browser UI) > explains an unusable file in plain words
+- Upload & Test CSV (browser UI) > clear resets the page
 
 </details>
 
@@ -193,8 +216,12 @@ Run on the production build (`npm run build` then `next start`) with `scripts/sm
 | Negative API tests | Unknown account → 422; oversell → 422 "Insufficient stock"; missing description → 400; invalid JSON → 400; reset without `DEMO_RESET_ENABLED` in production mode → 403. |
 | Optional FX API | A live call returned HTTP 200 with USD/EUR/GBP→INR reference rates on 9 Oct 2026 (also one transient "unavailable" result during an earlier smoke run, after which the timeout handling was made per-request and parallel). The panel and `/api/fx` degrade to `{"available":false,...}` without affecting any accounting page (unit-tested with mocked failures). |
 
+## 4b. Upload & Test CSV feature
+Covered by `tests/upload.test.ts` and `tests/upload-ui.test.tsx` (see tables above) and by HTTP checks on the running app (`/upload` → 200; `/api/template?kind=blank` returns a valid file; `/api/analyze/excel` returned an `.xlsx` for a good file and HTTP 422 with the first problem for a bad one). Bugs found by these tests and fixed: (1) files with mixed or CR-only line endings could merge two rows into one - line endings are now normalised; (2) rows with too many/few fields were silently mis-aligned - they are now reported with their row number; (3) a tiny/odd file produced a confusing "cannot auto-detect delimiter" message instead of "missing required column" - fixed.
+The DOM tests render the real component in jsdom and simulate a file drop; they are **not** a substitute for trying it in a real browser (a real-browser drag-and-drop was not run in this environment, because Chrome automation was not connected).
+
 ## 5. Not tested / limitations
-- The UI was exercised through HTTP responses and the production build; **no browser/visual automated tests** were run and no screenshots exist.
+- The UI was exercised through HTTP responses, the production build and (for the upload page only) jsdom DOM tests; **no real-browser or visual tests** were run and no screenshots exist.
 - **Vercel and Neon were not tested** (no authenticated Vercel/Neon access from this environment). PostgreSQL behaviour was verified on a local embedded server, which should match Neon but is not the same service.
 - The Excel file was created and read back with ExcelJS (12 sheets, formulas present); it was not opened in desktop Excel in this environment. ExcelJS does not store a cached value of exactly 0 for formula cells, so Excel/LibreOffice compute those on opening.
 - The PDF option is browser *Print / Save as PDF*; no PDF files are generated.

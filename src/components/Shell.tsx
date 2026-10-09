@@ -7,7 +7,7 @@ const NAV = [
   ["/", "Dashboard"], ["/accounts", "Chart of Accounts"], ["/record", "Record Transaction"], ["/transactions", "Transaction Register"],
   ["/ledger", "General Ledger"], ["/trial-balance", "Trial Balance"], ["/profit-and-loss", "Profit and Loss"], ["/balance-sheet", "Balance Sheet"],
   ["/inventory", "Inventory"], ["/fixed-assets", "Fixed Assets & Depreciation"], ["/gst", "GST Summary"], ["/validation", "Accounting Validation"],
-  ["/export", "Export & Submission Files"],
+  ["/upload", "Upload & Test Your CSV"], ["/export", "Export & Submission Files"],
 ] as const;
 
 function Nav() {

@@ -1,22 +1,13 @@
 import { z } from "zod";
 import { postTransactions } from "@/lib/accounting/engine";
-import { buildLedger } from "@/lib/accounting/ledger";
 import { buildFinancials, DEFAULT_PERIOD, type Period } from "@/lib/accounting/reports";
-import { fixedAssetReport, gstReport, inventoryReport } from "@/lib/accounting/subreports";
+import { buildReports, type Books } from "@/lib/reportBundle";
 import { isValidDate } from "@/lib/accounting/journal";
 import { runChecks } from "@/lib/validation/checks";
-import { AccountingError, TRANSACTION_TYPES, type Account, type PostedLedger, type SourceTransaction } from "@/types/accounting";
+import { AccountingError, TRANSACTION_TYPES, type Account, type SourceTransaction } from "@/types/accounting";
 import { loadBaseChart, loadSampleTransactions } from "@/lib/database/csv";
 import { getStore } from "@/lib/database";
 import { isEmptyDatabase } from "@/lib/database/postgresStore";
-
-export interface Books {
-  accounts: Account[];
-  sources: SourceTransaction[];
-  posted: PostedLedger;
-  storeMode: string;
-  storeLabel: string;
-}
 
 /** Load stored source transactions and run them through the accounting engine (the only way to get a ledger). */
 export async function loadBooks(): Promise<Books> {
@@ -34,19 +25,6 @@ export function resolvePeriod(params: { from?: string; to?: string }): Period {
   return start <= end ? { start, end } : DEFAULT_PERIOD;
 }
 
-/** Everything the UI / exports need for one period, all derived from the same posted journal. */
-export function buildReports(books: Books, period: Period) {
-  const financials = buildFinancials(books.posted.entries, books.accounts, period);
-  const checks = runChecks(books.posted, books.accounts, financials, period);
-  return {
-    period, financials, checks,
-    inventory: inventoryReport(books.posted, period),
-    fixedAssets: fixedAssetReport(books.posted, period),
-    gst: gstReport(books.posted.entries, period),
-    ledger: buildLedger(books.posted.entries, books.accounts, { from: period.start, to: period.end }),
-  };
-}
-
 // ---------- writes ----------
 const text = z.string().trim().max(300).default("");
 export const newTransactionSchema = z.object({
@@ -59,6 +37,9 @@ export const newTransactionSchema = z.object({
  * Validate and post one new transaction. The full batch (existing + new) is re-run through the engine, and the full set of
  * integrity checks must still pass, before anything is written. Throws AccountingError / ZodError otherwise.
  */
+export { buildReports };
+export type { Books };
+
 export interface PostedPreview {
   txnId: string; entryId: string; saved: boolean;
   lines: { accountCode: string; accountName: string; debit: string; credit: string; party?: string }[];

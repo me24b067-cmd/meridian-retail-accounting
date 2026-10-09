@@ -1,7 +1,7 @@
 import Papa from "papaparse";
-import type { Books } from "@/lib/books";
-import { buildReports } from "@/lib/books";
-import { sourcesToCsv } from "@/lib/database/csv";
+import type { Books } from "@/lib/reportBundle";
+import type { buildReports } from "@/lib/reportBundle";
+import { sourcesToCsv } from "@/lib/csvParse";
 import type { Period, StatementRow } from "@/lib/accounting/reports";
 
 type Reports = ReturnType<typeof buildReports>;

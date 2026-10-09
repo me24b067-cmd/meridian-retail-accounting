@@ -16,7 +16,7 @@ A local SQLite file is deliberately **not** used in production: Vercel's filesys
 ## Option A - read-only public demo (no database, simplest)
 1. Push the repo to GitHub.
 2. In Vercel: **Add New → Project → Import** the repository. Framework: Next.js (auto-detected). No environment variables needed. Deploy.
-3. The deployed app shows all 111 demo transactions and every report; "Post transaction" is disabled.
+3. The deployed app shows all 111 demo transactions and every report; "Post transaction" is disabled. **Upload & Test Your CSV works in this mode** (it runs in the visitor's browser and stores nothing).
 
 ## Option B - full read/write with Neon Postgres
 1. Create the Vercel project as in Option A (do not deploy yet, or redeploy afterwards).
@@ -45,6 +45,7 @@ curl -s $URL/api/summary          # expect balanceSheet.balanced=true, differenc
 curl -s -o /dev/null -w "%{http_code}\n" $URL/ $URL/balance-sheet $URL/profit-and-loss $URL/trial-balance
 curl -s -o bs.csv $URL/api/export/balance_sheet && tail -2 bs.csv
 curl -s -o wb.xlsx $URL/api/export/xlsx && file wb.xlsx
+curl -s -o /dev/null -w "%{http_code}\n" $URL/upload $URL/api/template
 curl -s $URL/api/fx               # {"available":false,...} is acceptable and must not break anything else
 ```
 With a database (Option B) also: post a transaction, reload, and confirm it persists (`/api/summary` → `sourceTransactions` increases by 1).

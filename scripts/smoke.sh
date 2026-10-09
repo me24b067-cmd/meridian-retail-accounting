@@ -4,7 +4,7 @@
 set -u
 URL="${1:?usage: smoke.sh <base-url>}"
 fail=0
-for p in / /accounts /record /transactions /ledger /trial-balance /profit-and-loss /balance-sheet /inventory /fixed-assets /gst /validation /export; do
+for p in / /accounts /record /upload /transactions /ledger /trial-balance /profit-and-loss /balance-sheet /inventory /fixed-assets /gst /validation /export; do
   code=$(curl -s -o /dev/null -w '%{http_code}' "$URL$p"); echo "$code $p"; [ "$code" = 200 ] || fail=1
 done
 summary=$(curl -s "$URL/api/summary"); echo "$summary"

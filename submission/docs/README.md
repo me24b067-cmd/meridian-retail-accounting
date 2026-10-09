@@ -45,7 +45,7 @@ Requires **Node.js ≥ 20.9** (developed and verified on Node 24). No database, 
 | Publish software, entries, Balance Sheet, P&L | This repo + `submission/` folder |
 
 ## Features
-Dashboard with KPIs and charts · editable chart of accounts · validated *Record Transaction* form with journal **preview** · transaction register with filters (date, account, category, type, text) and per-transaction journal drill-down · general ledger · trial balance · P&L · Balance Sheet with pass/fail and the numeric difference · inventory · fixed assets & depreciation · GST summary · accounting validation (27 checks with expected/actual/difference) · CSV, Excel and print-to-PDF · reporting-period selector · demo reset.
+Dashboard with KPIs and charts · editable chart of accounts · validated *Record Transaction* form with journal **preview** · transaction register with filters (date, account, category, type, text) and per-transaction journal drill-down · general ledger · trial balance · P&L · Balance Sheet with pass/fail and the numeric difference · inventory · fixed assets & depreciation · GST summary · accounting validation (27 checks with expected/actual/difference) · CSV, Excel and print-to-PDF · reporting-period selector · demo reset · **Upload & Test Your CSV** (drag-and-drop your own transactions).
 
 ## Screenshots
 No screenshots are included (none have been captured). To add them: run the app, open each page, save PNGs into a `docs/screenshots/` folder and reference them here.
@@ -76,7 +76,7 @@ src/lib/books.ts         load → post → report; write path with validation
 src/app/                 pages and API routes
 src/components/          UI components, forms
 scripts/                 generate-submission.ts, migrate.ts
-tests/                   76 tests (6 files)
+tests/                   90 tests (8 files)
 submission/              final deliverables (workbook, CSVs, statements, docs)
 ```
 
@@ -96,6 +96,13 @@ Source transaction → **journal entry** (≥ 2 lines, debits = credits, else re
 
 CSV columns of `data/sample_transactions.csv`: `txn_id, date, type, description, party, reference, category, item, quantity, unit_amount, amount, gst_rate, gst_treatment, account, settle, to_account, interest_amount, deduction_amount, useful_life_years, residual_value`. `settle` is a cash/bank code (1001/1002/1003) or `CREDIT`. Valid types: see `TRANSACTION_TYPES` in `src/types/accounting.ts`.
 
+## Upload & Test Your CSV (cross-test with your own data)
+Open **Upload & Test Your CSV** in the sidebar (`/upload`) and drag a transactions CSV into the box (or click to choose; "Try with the built-in sample" and "Download blank template" are provided).
+- The file is analysed **in your browser** by the same accounting engine; it is **not saved** and the app's own ledger is untouched, so it is safe on a shared deployment and works even on the read-only Vercel demo.
+- If every row posts correctly you get the Balance Sheet, Profit and Loss, Trial Balance, all 27 validation checks (with differences) and the journal entries, with a period selector (defaults to the financial year(s) covering your dates), plus downloads (7 CSVs; the Excel workbook is built server-side from your CSV without storing it).
+- If anything is wrong you get the **complete list of problems** with spreadsheet row numbers (unknown account, oversold stock, bad date/type, duplicate ID, wrong number of fields, over-collection …) and no statements - the app never produces reports from data it cannot post correctly.
+- Format: the same columns as `data/sample_transactions.csv`; only `txn_id, date, type, description` are required, other columns may be omitted or blank. Dates `YYYY-MM-DD`; account codes from the Chart of Accounts; any line-ending style, quoted fields and thousands commas are accepted. Limits: 2 MB, 5,000 rows. The on-page guide explains each transaction type's fields.
+
 ## Environment variables (all optional)
 See `.env.example`: `DATABASE_URL` (PostgreSQL), `DEMO_RESET_ENABLED`, `FX_API_BASE_URL`. Never commit real values.
 
@@ -113,7 +120,7 @@ Reset to the demo dataset: **Export** page → *Reset to demo dataset* (dev, or 
 ## Reproducing the results
 ```bash
 npm install
-npm test                         # 76 tests, includes the full 111-transaction pipeline
+npm test                         # 90 tests, includes the full 111-transaction pipeline
 npm run generate:submission      # rewrites submission/ and prints the headline figures; exits non-zero if any check fails
 ```
 Validate the Balance Sheet in the app: **Balance Sheet** page (green banner with the difference) or **Accounting Validation** page; or `curl localhost:3000/api/summary` → `balanceSheet.difference` is `"0.00"`.

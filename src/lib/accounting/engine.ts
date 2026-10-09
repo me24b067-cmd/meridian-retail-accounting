@@ -37,18 +37,39 @@ export function chartMap(accounts: Account[]): Map<string, Account> {
  * offending transaction, and nothing is returned - a bad batch is never partially posted.
  */
 export function postTransactions(sources: SourceTransaction[], accounts: Account[], config: EngineConfig = DEFAULT_CONFIG): PostedLedger {
+  const { ledger, errors } = postTransactionsLenient(sources, accounts, config);
+  if (errors.length) throw new AccountingError(errors[0].message, errors[0].txnId);
+  return ledger;
+}
+
+export interface PostingProblem { txnId: string; row: number; message: string }
+
+/**
+ * Same rules as postTransactions, but keeps going after a bad transaction and returns EVERY problem found (used by the
+ * CSV upload tester). A transaction that fails is skipped, so later problems that merely follow from it (e.g. a collection
+ * for a skipped sale) may also be listed. Only trust the ledger when `errors` is empty.
+ */
+export function postTransactionsLenient(sources: SourceTransaction[], accounts: Account[], config: EngineConfig = DEFAULT_CONFIG): { ledger: PostedLedger; errors: PostingProblem[] } {
   const chart = chartMap(accounts);
   const poster = new Poster(chart, config);
+  const errors: PostingProblem[] = [];
   const seen = new Set<string>();
-  for (const tx of sources) {
+  const usable: { tx: SourceTransaction; row: number }[] = [];
+  sources.forEach((tx, i) => {
     const id = tx.txnId.trim();
-    if (!id) throw new AccountingError("Every transaction needs a unique transaction ID");
-    if (seen.has(id)) throw new AccountingError(`Duplicate transaction ID "${id}"`, id);
+    const row = i + 2; // spreadsheet row number (header is row 1)
+    if (!id) { errors.push({ txnId: "", row, message: "Every transaction needs a unique transaction ID" }); return; }
+    if (seen.has(id)) { errors.push({ txnId: id, row, message: `[${id}] Duplicate transaction ID "${id}"` }); return; }
     seen.add(id);
+    usable.push({ tx, row });
+  });
+  usable.sort((a, b) => (a.tx.date === b.tx.date ? a.tx.txnId.localeCompare(b.tx.txnId) : a.tx.date < b.tx.date ? -1 : 1));
+  for (const { tx, row } of usable) {
+    try { poster.post(tx); } catch (e) {
+      errors.push({ txnId: tx.txnId.trim(), row, message: e instanceof AccountingError ? e.message : `[${tx.txnId}] ${(e as Error).message}` });
+    }
   }
-  const ordered = [...sources].sort((a, b) => (a.date === b.date ? a.txnId.localeCompare(b.txnId) : a.date < b.date ? -1 : 1));
-  for (const tx of ordered) poster.post(tx);
-  return poster.result();
+  return { ledger: poster.result(), errors };
 }
 
 class Poster {

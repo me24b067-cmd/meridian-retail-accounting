@@ -1,5 +1,5 @@
-import type { Books } from "@/lib/books";
-import { buildReports } from "@/lib/books";
+import type { Books } from "@/lib/reportBundle";
+import type { buildReports } from "@/lib/reportBundle";
 import { formatINR } from "@/lib/accounting/money";
 import type { StatementRow } from "@/lib/accounting/reports";
 
