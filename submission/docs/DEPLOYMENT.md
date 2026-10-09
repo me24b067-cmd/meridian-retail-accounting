@@ -1,7 +1,7 @@
 # Deployment Guide
 
 ## Status (honest summary)
-- **GitHub:** see the "Repository" section of `README.md` for the URL if the push succeeded.
+- **GitHub:** https://github.com/me24b067-cmd/meridian-retail-accounting (public; pushed and verified).
 - **Vercel:** the app is *ready* to deploy and passes `npm run build`, but **a Vercel deployment was not performed from this environment** - the Vercel CLI is not installed/authenticated here and a database cannot be provisioned without a Vercel/Neon login. No Vercel URL is claimed anywhere. Follow the steps below to deploy it yourself (about 5 minutes, free).
 
 ## How data is stored (and why)

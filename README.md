@@ -122,7 +122,8 @@ Validate the Balance Sheet in the app: **Balance Sheet** page (green banner with
 Only one optional external API (Frankfurter / ECB reference FX rates, no key) shown as reference data on the Dashboard; the accounting never uses it. See [`API_RESEARCH.md`](API_RESEARCH.md).
 
 ## Repository and deployment
-See [`DEPLOYMENT.md`](DEPLOYMENT.md). GitHub URL and Vercel URL, if published, are listed here: *GitHub: see below · Vercel: not deployed from this environment (needs Vercel login; steps in DEPLOYMENT.md).*
+- **GitHub (public):** https://github.com/me24b067-cmd/meridian-retail-accounting - pushed and verified; a fresh clone passes `npm ci`, `npm test` (76/76) and `npm run generate:submission`.
+- **Vercel:** **not deployed.** The Vercel CLI in this environment is not logged in, so no Vercel deployment or URL exists. The app builds successfully (`npm run build`) and is configured for Vercel; follow [`DEPLOYMENT.md`](DEPLOYMENT.md) (about 5 minutes: import the GitHub repo in Vercel, optionally add Neon for read/write).
 
 ## Known limitations / future work
 Disposals, multi-currency, bank-statement import & true reconciliation, CGST/SGST/IGST split and GST returns, amortisation schedules, authentication/multi-user, editing workflow (reversal helper), audited PDF layout. Depreciation uses a 365-day year. Sample loan interest is entered, not computed. The UI was verified by HTTP/API tests and a production build, not by automated browser tests.
