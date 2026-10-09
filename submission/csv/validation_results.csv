@@ -1,0 +1,28 @@
+check_id,check,expected,actual,difference,result,detail
+J1,Total journal debits = total journal credits,20005554.14,20005554.14,0.00,PASS,111 entries
+J2,Every journal entry balances (count of unbalanced entries),0.00,0.00,0.00,PASS,Entries where debit != credit
+T1,Trial Balance: total debits = total credits,7717631.78,7717631.78,0.00,PASS,Difference column of the Trial Balance
+B1,Balance Sheet: Total Assets = Total Liabilities + Total Equity,4471605.86,4471605.86,0.00,PASS,Difference = Assets - Liabilities - Equity
+P1,Net profit = Total income - Total expenses,650465.86,650465.86,0.00,PASS,Recomputed from income and expense totals
+P2,Gross profit = Sales + Service - COGS,1761957.64,1761957.64,0.00,PASS,Trading formula
+E1,Balance Sheet current-year profit = P&L net profit,650465.86,650465.86,0.00,PASS,Profit is included in equity exactly once
+E2,Equity = capital + retained earnings + current-year profit,3750465.86,3750465.86,0.00,PASS,Retained earnings includes prior-period profit of 0.00
+P3,Net profit agrees with income - expenses summed straight from journal lines,650465.86,650465.86,0.00,PASS,Independent aggregation
+C1001,Cash in Hand: balance sheet = sum of its journal lines,120540.00,120540.00,0.00,PASS,Cash book agreement
+C1002,Bank Account 1 - HDFC Current A/c: balance sheet = sum of its journal lines,1589510.00,1589510.00,0.00,PASS,Cash book agreement
+C1003,Bank Account 2 - ICICI Current A/c: balance sheet = sum of its journal lines,1434450.00,1434450.00,0.00,PASS,Cash book agreement
+C4,No cash or bank account is ever overdrawn (lowest running balance),0.00,0.00,0.00,PASS,All balances stayed >= 0
+I1,Inventory ledger (1200) = inventory subledger value,193957.64,193957.64,0.00,PASS,Subledger = perpetual weighted-average movements
+I2,No item has negative stock (count),0.00,0.00,0.00,PASS,Policy: negative inventory disallowed unless configured
+I3,Inventory purchased - cost of goods sold = closing inventory,193957.64,193957.64,0.00,PASS,Roll-forward
+I4,COGS ledger (5001) = cost of sale movements in subledger,2018042.36,2018042.36,0.00,PASS,Costs leaving inventory = expense recognised
+F1,Fixed asset cost (ledger) = asset register cost,770000.00,770000.00,0.00,PASS,Three fixed assets
+F2,Accumulated depreciation (ledger) = depreciation schedule,103391.78,103391.78,0.00,PASS,Contra-asset accounts
+F3,Net fixed assets on Balance Sheet = cost - accumulated depreciation,666608.22,666608.22,0.00,PASS,Net book value
+F4,Depreciation expense in period = depreciation schedule,103391.78,103391.78,0.00,PASS,P&L vs register
+S1100,Accounts receivable ledger = sum of customer/supplier subledger balances,277200.00,277200.00,0.00,PASS,3 parties
+S2001,Accounts payable ledger = sum of customer/supplier subledger balances,139240.00,139240.00,0.00,PASS,2 parties
+L1,Bank loan (ledger) = loan received - principal repaid (interest excluded),500000.00,500000.00,0.00,PASS,Principal-only tracker
+L2,Loan given (ledger) = loan advanced - principal recovered,100000.00,100000.00,0.00,PASS,Principal-only tracker
+R1,Prepaid rent (ledger) = prepaid paid - amount expensed,66000.00,66000.00,0.00,PASS,Unexpired portion
+G1,Input GST credit (ledger) = credit recorded - credit utilised,21240.00,21240.00,0.00,PASS,"GST on inventory, assets and expenses only; settlements reduce the credit"

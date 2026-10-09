@@ -1,0 +1,37 @@
+code,name,type,normal_balance,group,is_contra,description
+1001,Cash in Hand,asset,debit,Cash and Bank,false,Physical cash held at the shop
+1002,Bank Account 1 - HDFC Current A/c,asset,debit,Cash and Bank,false,Primary operating bank account
+1003,Bank Account 2 - ICICI Current A/c,asset,debit,Cash and Bank,false,Secondary bank account (payroll and online sales)
+1100,Accounts Receivable,asset,debit,Receivables,false,Amounts owed by credit customers
+1150,Accrued Interest Receivable,asset,debit,Receivables,false,Interest earned on loan given but not yet received
+1200,Inventory,asset,debit,Inventory,false,Goods held for resale (perpetual weighted-average cost)
+1300,Prepaid Rent,asset,debit,Prepaid Expenses,false,Rent paid in advance and not yet consumed
+1400,Input GST Credit,asset,debit,GST,false,Recoverable GST paid on purchases and expenses
+1500,Loan Given,asset,debit,Loans,false,Principal lent to another party
+1600,Furniture and Fixtures,asset,debit,Fixed Assets,false,Fixed asset at cost
+1601,Accumulated Depreciation - Furniture,asset,credit,Fixed Assets,true,Contra-asset for furniture
+1610,Computer Equipment,asset,debit,Fixed Assets,false,Fixed asset at cost
+1611,Accumulated Depreciation - Computers,asset,credit,Fixed Assets,true,Contra-asset for computers
+1620,Delivery Vehicle,asset,debit,Fixed Assets,false,Fixed asset at cost
+1621,Accumulated Depreciation - Vehicle,asset,credit,Fixed Assets,true,Contra-asset for vehicle
+2001,Accounts Payable,liability,credit,Payables,false,Amounts owed to suppliers
+2002,Salaries Payable,liability,credit,Payables,false,Net salaries accrued but not yet paid
+2100,Bank Loan,liability,credit,Loans,false,Loan availed from a bank (principal only)
+2200,Output GST Payable,liability,credit,GST,false,GST collected on taxable sales
+2300,TDS and PF Payable,liability,credit,Other Current Liabilities,false,Statutory deductions withheld from salaries
+2400,Accrued Expenses,liability,credit,Other Current Liabilities,false,Expenses incurred but not yet paid (e.g. accrued loan interest)
+3001,Owner's Capital,equity,credit,Equity,false,Capital introduced by the owner
+3002,Retained Earnings,equity,credit,Equity,false,Accumulated profits of prior periods
+3003,Current-Year Profit or Loss,equity,credit,Equity,false,Computed from income and expense accounts - never posted directly
+4001,Sales Revenue,income,credit,Income,false,Sale of goods
+4002,Service Income,income,credit,Income,false,Installation and delivery services
+4003,Interest Income,income,credit,Income,false,Interest on bank balances and loan given
+5001,Cost of Goods Sold,expense,debit,Cost of Sales,false,Weighted-average cost of goods sold
+5101,Salaries Expense,expense,debit,Operating Expenses,false,Gross salaries
+5102,Rent Expense,expense,debit,Operating Expenses,false,Rent consumed in the period
+5103,Utilities Expense,expense,debit,Operating Expenses,false,Electricity and internet
+5104,Advertising Expense,expense,debit,Operating Expenses,false,Marketing and promotion
+5105,Depreciation Expense,expense,debit,Operating Expenses,false,Straight-line depreciation
+5106,Bank Charges,expense,debit,Operating Expenses,false,Bank fees
+5107,Interest Expense,expense,debit,Finance Costs,false,Interest on bank loan
+5108,Other Operating Expenses,expense,debit,Operating Expenses,false,Repairs fuel insurance and sundry

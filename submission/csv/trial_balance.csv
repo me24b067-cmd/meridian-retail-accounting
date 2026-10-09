@@ -1,0 +1,37 @@
+account_code,account_name,debit,credit
+1001,Cash in Hand,120540.00,0.00
+1002,Bank Account 1 - HDFC Current A/c,1589510.00,0.00
+1003,Bank Account 2 - ICICI Current A/c,1434450.00,0.00
+1100,Accounts Receivable,277200.00,0.00
+1150,Accrued Interest Receivable,2100.00,0.00
+1200,Inventory,193957.64,0.00
+1300,Prepaid Rent,66000.00,0.00
+1400,Input GST Credit,21240.00,0.00
+1500,Loan Given,100000.00,0.00
+1600,Furniture and Fixtures,150000.00,0.00
+1601,Accumulated Depreciation - Furniture,0.00,13923.29
+1610,Computer Equipment,120000.00,0.00
+1611,Accumulated Depreciation - Computers,0.00,37687.66
+1620,Delivery Vehicle,500000.00,0.00
+1621,Accumulated Depreciation - Vehicle,0.00,51780.83
+2001,Accounts Payable,0.00,139240.00
+2002,Salaries Payable,0.00,37000.00
+2100,Bank Loan,0.00,500000.00
+2200,Output GST Payable,0.00,29700.00
+2300,TDS and PF Payable,0.00,12000.00
+2400,Accrued Expenses,0.00,3200.00
+3001,Owner's Capital,0.00,3100000.00
+4001,Sales Revenue,0.00,3685000.00
+4002,Service Income,0.00,95000.00
+4003,Interest Income,0.00,13100.00
+5001,Cost of Goods Sold,2018042.36,0.00
+5101,Salaries Expense,480000.00,0.00
+5102,Rent Expense,264000.00,0.00
+5103,Utilities Expense,58500.00,0.00
+5104,Advertising Expense,125000.00,0.00
+5105,Depreciation Expense,103391.78,0.00
+5106,Bank Charges,4500.00,0.00
+5107,Interest Expense,77200.00,0.00
+5108,Other Operating Expenses,12000.00,0.00
+,TOTAL,7717631.78,7717631.78
+,DIFFERENCE (debits - credits),0.00,

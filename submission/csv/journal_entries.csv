@@ -1,0 +1,327 @@
+journal_id,txn_id,date,reference,description,category,line_no,account_code,account_name,debit,credit,party,gst_rate,gst_treatment
+JE-T001,T001,2025-04-01,CAP-001,Owner introduces capital into Bank Account 1,Capital,1,1002,Bank Account 1 - HDFC Current A/c,2500000.00,0.00,,,
+JE-T001,T001,2025-04-01,CAP-001,Owner introduces capital into Bank Account 1,Capital,2,3001,Owner's Capital,0.00,2500000.00,,,
+JE-T002,T002,2025-04-01,CAP-002,Owner introduces cash capital,Capital,1,1001,Cash in Hand,100000.00,0.00,,,
+JE-T002,T002,2025-04-01,CAP-002,Owner introduces cash capital,Capital,2,3001,Owner's Capital,0.00,100000.00,,,
+JE-T003,T003,2025-04-02,REF-003,Fund Bank Account 2 from Bank Account 1 (inter-bank transfer),Bank Transfer,1,1003,Bank Account 2 - ICICI Current A/c,800000.00,0.00,,,
+JE-T003,T003,2025-04-02,REF-003,Fund Bank Account 2 from Bank Account 1 (inter-bank transfer),Bank Transfer,2,1002,Bank Account 1 - HDFC Current A/c,0.00,800000.00,,,
+JE-T004,T004,2025-04-02,REF-004,Cash withdrawal from Bank Account 1 for petty cash,Cash Withdrawal,1,1001,Cash in Hand,60000.00,0.00,,,
+JE-T004,T004,2025-04-02,REF-004,Cash withdrawal from Bank Account 1 for petty cash,Cash Withdrawal,2,1002,Bank Account 1 - HDFC Current A/c,0.00,60000.00,,,
+JE-T005,T005,2025-04-03,REF-005,Purchase of shop furniture and racks,Fixed Assets,1,1600,Furniture and Fixtures,150000.00,0.00,,18,TAXABLE
+JE-T005,T005,2025-04-03,REF-005,Purchase of shop furniture and racks,Fixed Assets,2,1400,Input GST Credit,27000.00,0.00,,18,TAXABLE
+JE-T005,T005,2025-04-03,REF-005,Purchase of shop furniture and racks,Fixed Assets,3,1002,Bank Account 1 - HDFC Current A/c,0.00,177000.00,Oak Interiors,18,TAXABLE
+JE-T006,T006,2025-04-04,REF-006,Purchase of billing computers and printer,Fixed Assets,1,1610,Computer Equipment,120000.00,0.00,,18,TAXABLE
+JE-T006,T006,2025-04-04,REF-006,Purchase of billing computers and printer,Fixed Assets,2,1400,Input GST Credit,21600.00,0.00,,18,TAXABLE
+JE-T006,T006,2025-04-04,REF-006,Purchase of billing computers and printer,Fixed Assets,3,1003,Bank Account 2 - ICICI Current A/c,0.00,141600.00,Digital Hub,18,TAXABLE
+JE-T007,T007,2025-04-05,REF-007,Term loan received from HDFC Bank (11% p.a.),Loan Availed,1,1002,Bank Account 1 - HDFC Current A/c,800000.00,0.00,,,
+JE-T007,T007,2025-04-05,REF-007,Term loan received from HDFC Bank (11% p.a.),Loan Availed,2,2100,Bank Loan,0.00,800000.00,,,
+JE-T008,T008,2025-04-06,REF-008,Purchase of delivery van,Fixed Assets,1,1620,Delivery Vehicle,500000.00,0.00,,18,TAXABLE
+JE-T008,T008,2025-04-06,REF-008,Purchase of delivery van,Fixed Assets,2,1400,Input GST Credit,90000.00,0.00,,18,TAXABLE
+JE-T008,T008,2025-04-06,REF-008,Purchase of delivery van,Fixed Assets,3,1002,Bank Account 1 - HDFC Current A/c,0.00,590000.00,Star Motors,18,TAXABLE
+JE-T009,T009,2025-04-10,REF-009,Shop rent for April to June 2025 paid for the quarter,Rent,1,5102,Rent Expense,66000.00,0.00,,18,TAXABLE
+JE-T009,T009,2025-04-10,REF-009,Shop rent for April to June 2025 paid for the quarter,Rent,2,1400,Input GST Credit,11880.00,0.00,,18,TAXABLE
+JE-T009,T009,2025-04-10,REF-009,Shop rent for April to June 2025 paid for the quarter,Rent,3,1002,Bank Account 1 - HDFC Current A/c,0.00,77880.00,Mehta Properties,18,TAXABLE
+JE-T010,T010,2025-04-12,REF-010,Purchase of USB fast chargers - paid by bank,Inventory Purchase,1,1200,Inventory,280000.00,0.00,,18,TAXABLE
+JE-T010,T010,2025-04-12,REF-010,Purchase of USB fast chargers - paid by bank,Inventory Purchase,2,1400,Input GST Credit,50400.00,0.00,,18,TAXABLE
+JE-T010,T010,2025-04-12,REF-010,Purchase of USB fast chargers - paid by bank,Inventory Purchase,3,1002,Bank Account 1 - HDFC Current A/c,0.00,330400.00,Sharma Electronics,18,TAXABLE
+JE-T011,T011,2025-04-14,REF-011,Purchase of laptop backpacks on credit,Inventory Purchase,1,1200,Inventory,360000.00,0.00,,12,TAXABLE
+JE-T011,T011,2025-04-14,REF-011,Purchase of laptop backpacks on credit,Inventory Purchase,2,1400,Input GST Credit,43200.00,0.00,,12,TAXABLE
+JE-T011,T011,2025-04-14,REF-011,Purchase of laptop backpacks on credit,Inventory Purchase,3,2001,Accounts Payable,0.00,403200.00,Urban Gear Pvt Ltd,12,TAXABLE
+JE-T012,T012,2025-04-18,REF-012,Purchase of LED desk lamps - paid by bank,Inventory Purchase,1,1200,Inventory,325000.00,0.00,,18,TAXABLE
+JE-T012,T012,2025-04-18,REF-012,Purchase of LED desk lamps - paid by bank,Inventory Purchase,2,1400,Input GST Credit,58500.00,0.00,,18,TAXABLE
+JE-T012,T012,2025-04-18,REF-012,Purchase of LED desk lamps - paid by bank,Inventory Purchase,3,1003,Bank Account 2 - ICICI Current A/c,0.00,383500.00,Bright Lights Co,18,TAXABLE
+JE-T013,T013,2025-04-20,REF-013,Cash sale of USB chargers,Sales,1,1001,Cash in Hand,57820.00,0.00,Walk-in customers,18,TAXABLE
+JE-T013,T013,2025-04-20,REF-013,Cash sale of USB chargers,Sales,2,4001,Sales Revenue,0.00,49000.00,,18,TAXABLE
+JE-T013,T013,2025-04-20,REF-013,Cash sale of USB chargers,Sales,3,2200,Output GST Payable,0.00,8820.00,,18,TAXABLE
+JE-T013,T013,2025-04-20,REF-013,Cash sale of USB chargers,Sales,4,5001,Cost of Goods Sold,28000.00,0.00,,18,TAXABLE
+JE-T013,T013,2025-04-20,REF-013,Cash sale of USB chargers,Sales,5,1200,Inventory,0.00,28000.00,,18,TAXABLE
+JE-T014,T014,2025-04-22,REF-014,Credit sale of backpacks to Bright Offices LLP,Sales,1,1100,Accounts Receivable,110880.00,0.00,Bright Offices LLP,12,TAXABLE
+JE-T014,T014,2025-04-22,REF-014,Credit sale of backpacks to Bright Offices LLP,Sales,2,4001,Sales Revenue,0.00,99000.00,,12,TAXABLE
+JE-T014,T014,2025-04-22,REF-014,Credit sale of backpacks to Bright Offices LLP,Sales,3,2200,Output GST Payable,0.00,11880.00,,12,TAXABLE
+JE-T014,T014,2025-04-22,REF-014,Credit sale of backpacks to Bright Offices LLP,Sales,4,5001,Cost of Goods Sold,54000.00,0.00,,12,TAXABLE
+JE-T014,T014,2025-04-22,REF-014,Credit sale of backpacks to Bright Offices LLP,Sales,5,1200,Inventory,0.00,54000.00,,12,TAXABLE
+JE-T015,T015,2025-04-25,REF-015,Sale of LED lamps - UPI receipt into Bank Account 2,Sales,1,1003,Bank Account 2 - ICICI Current A/c,59000.00,0.00,Walk-in customers,18,TAXABLE
+JE-T015,T015,2025-04-25,REF-015,Sale of LED lamps - UPI receipt into Bank Account 2,Sales,2,4001,Sales Revenue,0.00,50000.00,,18,TAXABLE
+JE-T015,T015,2025-04-25,REF-015,Sale of LED lamps - UPI receipt into Bank Account 2,Sales,3,2200,Output GST Payable,0.00,9000.00,,18,TAXABLE
+JE-T015,T015,2025-04-25,REF-015,Sale of LED lamps - UPI receipt into Bank Account 2,Sales,4,5001,Cost of Goods Sold,26000.00,0.00,,18,TAXABLE
+JE-T015,T015,2025-04-25,REF-015,Sale of LED lamps - UPI receipt into Bank Account 2,Sales,5,1200,Inventory,0.00,26000.00,,18,TAXABLE
+JE-T016,T016,2025-04-26,REF-016,Electricity bill for April (outside GST),Utilities,1,5103,Utilities Expense,8500.00,0.00,,0,NON_TAXABLE
+JE-T016,T016,2025-04-26,REF-016,Electricity bill for April (outside GST),Utilities,2,1003,Bank Account 2 - ICICI Current A/c,0.00,8500.00,State Electricity Board,0,NON_TAXABLE
+JE-T017,T017,2025-04-28,REF-017,Online advertising campaign - April,Advertising,1,5104,Advertising Expense,25000.00,0.00,,18,TAXABLE
+JE-T017,T017,2025-04-28,REF-017,Online advertising campaign - April,Advertising,2,1400,Input GST Credit,4500.00,0.00,,18,TAXABLE
+JE-T017,T017,2025-04-28,REF-017,Online advertising campaign - April,Advertising,3,1003,Bank Account 2 - ICICI Current A/c,0.00,29500.00,AdReach Media,18,TAXABLE
+JE-T018,T018,2025-04-30,REF-018,Staff salaries for April 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T018,T018,2025-04-30,REF-018,Staff salaries for April 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T018,T018,2025-04-30,REF-018,Staff salaries for April 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T019,T019,2025-04-30,REF-019,Bank charges - April,Bank Charges,1,5106,Bank Charges,1000.00,0.00,,18,TAXABLE
+JE-T019,T019,2025-04-30,REF-019,Bank charges - April,Bank Charges,2,1400,Input GST Credit,180.00,0.00,,18,TAXABLE
+JE-T019,T019,2025-04-30,REF-019,Bank charges - April,Bank Charges,3,1002,Bank Account 1 - HDFC Current A/c,0.00,1180.00,HDFC Bank,18,TAXABLE
+JE-T020,T020,2025-05-02,REF-020,Net salaries for April 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T020,T020,2025-05-02,REF-020,Net salaries for April 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T021,T021,2025-05-07,REF-021,Deposit of April TDS/PF withheld from salaries,Payroll,1,2300,TDS and PF Payable,3000.00,0.00,,,
+JE-T021,T021,2025-05-07,REF-021,Deposit of April TDS/PF withheld from salaries,Payroll,2,1002,Bank Account 1 - HDFC Current A/c,0.00,3000.00,,,
+JE-T022,T022,2025-05-10,REF-022,Installation and set-up service for corporate customer,Service Income,1,1003,Bank Account 2 - ICICI Current A/c,47200.00,0.00,Bright Offices LLP,18,TAXABLE
+JE-T022,T022,2025-05-10,REF-022,Installation and set-up service for corporate customer,Service Income,2,4002,Service Income,0.00,40000.00,,18,TAXABLE
+JE-T022,T022,2025-05-10,REF-022,Installation and set-up service for corporate customer,Service Income,3,2200,Output GST Payable,0.00,7200.00,,18,TAXABLE
+JE-T023,T023,2025-05-15,REF-023,Part payment received from Bright Offices LLP,Customer Collection,1,1002,Bank Account 1 - HDFC Current A/c,40000.00,0.00,Bright Offices LLP,,
+JE-T023,T023,2025-05-15,REF-023,Part payment received from Bright Offices LLP,Customer Collection,2,1100,Accounts Receivable,0.00,40000.00,Bright Offices LLP,,
+JE-T024,T024,2025-05-20,REF-024,Part payment to Urban Gear Pvt Ltd,Supplier Payment,1,2001,Accounts Payable,200000.00,0.00,Urban Gear Pvt Ltd,,
+JE-T024,T024,2025-05-20,REF-024,Part payment to Urban Gear Pvt Ltd,Supplier Payment,2,1002,Bank Account 1 - HDFC Current A/c,0.00,200000.00,Urban Gear Pvt Ltd,,
+JE-T025,T025,2025-05-22,REF-025,Credit sale of chargers to Metro Mobiles,Sales,1,1100,Accounts Receivable,86730.00,0.00,Metro Mobiles,18,TAXABLE
+JE-T025,T025,2025-05-22,REF-025,Credit sale of chargers to Metro Mobiles,Sales,2,4001,Sales Revenue,0.00,73500.00,,18,TAXABLE
+JE-T025,T025,2025-05-22,REF-025,Credit sale of chargers to Metro Mobiles,Sales,3,2200,Output GST Payable,0.00,13230.00,,18,TAXABLE
+JE-T025,T025,2025-05-22,REF-025,Credit sale of chargers to Metro Mobiles,Sales,4,5001,Cost of Goods Sold,42000.00,0.00,,18,TAXABLE
+JE-T025,T025,2025-05-22,REF-025,Credit sale of chargers to Metro Mobiles,Sales,5,1200,Inventory,0.00,42000.00,,18,TAXABLE
+JE-T026,T026,2025-05-25,REF-026,Sale of backpacks - card receipt into Bank Account 2,Sales,1,1003,Bank Account 2 - ICICI Current A/c,147840.00,0.00,Walk-in customers,12,TAXABLE
+JE-T026,T026,2025-05-25,REF-026,Sale of backpacks - card receipt into Bank Account 2,Sales,2,4001,Sales Revenue,0.00,132000.00,,12,TAXABLE
+JE-T026,T026,2025-05-25,REF-026,Sale of backpacks - card receipt into Bank Account 2,Sales,3,2200,Output GST Payable,0.00,15840.00,,12,TAXABLE
+JE-T026,T026,2025-05-25,REF-026,Sale of backpacks - card receipt into Bank Account 2,Sales,4,5001,Cost of Goods Sold,72000.00,0.00,,12,TAXABLE
+JE-T026,T026,2025-05-25,REF-026,Sale of backpacks - card receipt into Bank Account 2,Sales,5,1200,Inventory,0.00,72000.00,,12,TAXABLE
+JE-T027,T027,2025-05-31,REF-027,Staff salaries for May 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T027,T027,2025-05-31,REF-027,Staff salaries for May 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T027,T027,2025-05-31,REF-027,Staff salaries for May 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T028,T028,2025-05-31,REF-028,Bank charges - May,Bank Charges,1,5106,Bank Charges,1000.00,0.00,,18,TAXABLE
+JE-T028,T028,2025-05-31,REF-028,Bank charges - May,Bank Charges,2,1400,Input GST Credit,180.00,0.00,,18,TAXABLE
+JE-T028,T028,2025-05-31,REF-028,Bank charges - May,Bank Charges,3,1002,Bank Account 1 - HDFC Current A/c,0.00,1180.00,HDFC Bank,18,TAXABLE
+JE-T029,T029,2025-06-02,REF-029,Net salaries for May 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T029,T029,2025-06-02,REF-029,Net salaries for May 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T030,T030,2025-06-07,REF-030,Deposit of May TDS/PF withheld from salaries,Payroll,1,2300,TDS and PF Payable,3000.00,0.00,,,
+JE-T030,T030,2025-06-07,REF-030,Deposit of May TDS/PF withheld from salaries,Payroll,2,1002,Bank Account 1 - HDFC Current A/c,0.00,3000.00,,,
+JE-T031,T031,2025-06-10,REF-031,Purchase of chargers on credit at a higher price,Inventory Purchase,1,1200,Inventory,145000.00,0.00,,18,TAXABLE
+JE-T031,T031,2025-06-10,REF-031,Purchase of chargers on credit at a higher price,Inventory Purchase,2,1400,Input GST Credit,26100.00,0.00,,18,TAXABLE
+JE-T031,T031,2025-06-10,REF-031,Purchase of chargers on credit at a higher price,Inventory Purchase,3,2001,Accounts Payable,0.00,171100.00,Sharma Electronics,18,TAXABLE
+JE-T032,T032,2025-06-12,REF-032,Short-term loan given to Kavita Traders (9% p.a.),Loan Given,1,1500,Loan Given,150000.00,0.00,Kavita Traders,,
+JE-T032,T032,2025-06-12,REF-032,Short-term loan given to Kavita Traders (9% p.a.),Loan Given,2,1002,Bank Account 1 - HDFC Current A/c,0.00,150000.00,,,
+JE-T033,T033,2025-06-20,REF-033,Electricity bill May-June (outside GST),Utilities,1,5103,Utilities Expense,17000.00,0.00,,0,NON_TAXABLE
+JE-T033,T033,2025-06-20,REF-033,Electricity bill May-June (outside GST),Utilities,2,1002,Bank Account 1 - HDFC Current A/c,0.00,17000.00,State Electricity Board,0,NON_TAXABLE
+JE-T034,T034,2025-06-28,REF-034,Rent for 12 months (1 Jul 2025 - 30 Jun 2026) paid in advance,Prepaid Rent,1,1300,Prepaid Rent,264000.00,0.00,,18,TAXABLE
+JE-T034,T034,2025-06-28,REF-034,Rent for 12 months (1 Jul 2025 - 30 Jun 2026) paid in advance,Prepaid Rent,2,1400,Input GST Credit,47520.00,0.00,,18,TAXABLE
+JE-T034,T034,2025-06-28,REF-034,Rent for 12 months (1 Jul 2025 - 30 Jun 2026) paid in advance,Prepaid Rent,3,1002,Bank Account 1 - HDFC Current A/c,0.00,311520.00,Mehta Properties,18,TAXABLE
+JE-T035,T035,2025-06-29,REF-035,Cash sale of LED lamps,Sales,1,1001,Cash in Hand,44250.00,0.00,Walk-in customers,18,TAXABLE
+JE-T035,T035,2025-06-29,REF-035,Cash sale of LED lamps,Sales,2,4001,Sales Revenue,0.00,37500.00,,18,TAXABLE
+JE-T035,T035,2025-06-29,REF-035,Cash sale of LED lamps,Sales,3,2200,Output GST Payable,0.00,6750.00,,18,TAXABLE
+JE-T035,T035,2025-06-29,REF-035,Cash sale of LED lamps,Sales,4,5001,Cost of Goods Sold,19500.00,0.00,,18,TAXABLE
+JE-T035,T035,2025-06-29,REF-035,Cash sale of LED lamps,Sales,5,1200,Inventory,0.00,19500.00,,18,TAXABLE
+JE-T036,T036,2025-06-30,REF-036,Metro Mobiles settles its invoice in full,Customer Collection,1,1003,Bank Account 2 - ICICI Current A/c,86730.00,0.00,Metro Mobiles,,
+JE-T036,T036,2025-06-30,REF-036,Metro Mobiles settles its invoice in full,Customer Collection,2,1100,Accounts Receivable,0.00,86730.00,Metro Mobiles,,
+JE-T037,T037,2025-06-30,REF-037,Staff salaries for June 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T037,T037,2025-06-30,REF-037,Staff salaries for June 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T037,T037,2025-06-30,REF-037,Staff salaries for June 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T038,T038,2025-06-30,REF-038,"Depreciation for the quarter ended 30 June 2025 (straight-line, pro-rata)",Depreciation,1,5105,Depreciation Expense,24945.20,0.00,,,
+JE-T038,T038,2025-06-30,REF-038,"Depreciation for the quarter ended 30 June 2025 (straight-line, pro-rata)",Depreciation,2,1601,Accumulated Depreciation - Furniture,0.00,3413.70,,,
+JE-T038,T038,2025-06-30,REF-038,"Depreciation for the quarter ended 30 June 2025 (straight-line, pro-rata)",Depreciation,3,1611,Accumulated Depreciation - Computers,0.00,9161.64,,,
+JE-T038,T038,2025-06-30,REF-038,"Depreciation for the quarter ended 30 June 2025 (straight-line, pro-rata)",Depreciation,4,1621,Accumulated Depreciation - Vehicle,0.00,12369.86,,,
+JE-T039,T039,2025-06-30,REF-039,Interest credited on Bank Account 1 balance,Interest Income,1,1002,Bank Account 1 - HDFC Current A/c,3100.00,0.00,,,
+JE-T039,T039,2025-06-30,REF-039,Interest credited on Bank Account 1 balance,Interest Income,2,4003,Interest Income,0.00,3100.00,,,
+JE-T040,T040,2025-07-02,REF-040,Net salaries for June 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T040,T040,2025-07-02,REF-040,Net salaries for June 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T041,T041,2025-07-10,REF-041,Credit sale of LED lamps to Bright Offices LLP,Sales,1,1100,Accounts Receivable,147500.00,0.00,Bright Offices LLP,18,TAXABLE
+JE-T041,T041,2025-07-10,REF-041,Credit sale of LED lamps to Bright Offices LLP,Sales,2,4001,Sales Revenue,0.00,125000.00,,18,TAXABLE
+JE-T041,T041,2025-07-10,REF-041,Credit sale of LED lamps to Bright Offices LLP,Sales,3,2200,Output GST Payable,0.00,22500.00,,18,TAXABLE
+JE-T041,T041,2025-07-10,REF-041,Credit sale of LED lamps to Bright Offices LLP,Sales,4,5001,Cost of Goods Sold,65000.00,0.00,,18,TAXABLE
+JE-T041,T041,2025-07-10,REF-041,Credit sale of LED lamps to Bright Offices LLP,Sales,5,1200,Inventory,0.00,65000.00,,18,TAXABLE
+JE-T042,T042,2025-07-15,REF-042,Monsoon promotion - social media ads,Advertising,1,5104,Advertising Expense,40000.00,0.00,,18,TAXABLE
+JE-T042,T042,2025-07-15,REF-042,Monsoon promotion - social media ads,Advertising,2,1400,Input GST Credit,7200.00,0.00,,18,TAXABLE
+JE-T042,T042,2025-07-15,REF-042,Monsoon promotion - social media ads,Advertising,3,1003,Bank Account 2 - ICICI Current A/c,0.00,47200.00,AdReach Media,18,TAXABLE
+JE-T043,T043,2025-07-20,REF-043,GST return Apr-Jun: output GST set off against input credit,GST Settlement,1,2200,Output GST Payable,95220.00,0.00,,,
+JE-T043,T043,2025-07-20,REF-043,GST return Apr-Jun: output GST set off against input credit,GST Settlement,2,1400,Input GST Credit,0.00,95220.00,,,
+JE-T044,T044,2025-07-25,REF-044,Payment to Sharma Electronics for June purchase,Supplier Payment,1,2001,Accounts Payable,171100.00,0.00,Sharma Electronics,,
+JE-T044,T044,2025-07-25,REF-044,Payment to Sharma Electronics for June purchase,Supplier Payment,2,1002,Bank Account 1 - HDFC Current A/c,0.00,171100.00,Sharma Electronics,,
+JE-T045,T045,2025-07-31,REF-045,Sale of chargers - UPI into Bank Account 1,Sales,1,1002,Bank Account 1 - HDFC Current A/c,115640.00,0.00,Walk-in customers,18,TAXABLE
+JE-T045,T045,2025-07-31,REF-045,Sale of chargers - UPI into Bank Account 1,Sales,2,4001,Sales Revenue,0.00,98000.00,,18,TAXABLE
+JE-T045,T045,2025-07-31,REF-045,Sale of chargers - UPI into Bank Account 1,Sales,3,2200,Output GST Payable,0.00,17640.00,,18,TAXABLE
+JE-T045,T045,2025-07-31,REF-045,Sale of chargers - UPI into Bank Account 1,Sales,4,5001,Cost of Goods Sold,56800.00,0.00,,18,TAXABLE
+JE-T045,T045,2025-07-31,REF-045,Sale of chargers - UPI into Bank Account 1,Sales,5,1200,Inventory,0.00,56800.00,,18,TAXABLE
+JE-T046,T046,2025-07-31,REF-046,Staff salaries for July 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T046,T046,2025-07-31,REF-046,Staff salaries for July 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T046,T046,2025-07-31,REF-046,Staff salaries for July 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T047,T047,2025-08-02,REF-047,Net salaries for July 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T047,T047,2025-08-02,REF-047,Net salaries for July 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T048,T048,2025-08-05,REF-048,Final payment to Urban Gear Pvt Ltd,Supplier Payment,1,2001,Accounts Payable,203200.00,0.00,Urban Gear Pvt Ltd,,
+JE-T048,T048,2025-08-05,REF-048,Final payment to Urban Gear Pvt Ltd,Supplier Payment,2,1002,Bank Account 1 - HDFC Current A/c,0.00,203200.00,Urban Gear Pvt Ltd,,
+JE-T049,T049,2025-08-12,REF-049,Sale of backpacks - back-to-college season,Sales,1,1003,Bank Account 2 - ICICI Current A/c,184800.00,0.00,Walk-in customers,12,TAXABLE
+JE-T049,T049,2025-08-12,REF-049,Sale of backpacks - back-to-college season,Sales,2,4001,Sales Revenue,0.00,165000.00,,12,TAXABLE
+JE-T049,T049,2025-08-12,REF-049,Sale of backpacks - back-to-college season,Sales,3,2200,Output GST Payable,0.00,19800.00,,12,TAXABLE
+JE-T049,T049,2025-08-12,REF-049,Sale of backpacks - back-to-college season,Sales,4,5001,Cost of Goods Sold,90000.00,0.00,,12,TAXABLE
+JE-T049,T049,2025-08-12,REF-049,Sale of backpacks - back-to-college season,Sales,5,1200,Inventory,0.00,90000.00,,12,TAXABLE
+JE-T050,T050,2025-08-18,REF-050,Collection from Bright Offices LLP,Customer Collection,1,1002,Bank Account 1 - HDFC Current A/c,100000.00,0.00,Bright Offices LLP,,
+JE-T050,T050,2025-08-18,REF-050,Collection from Bright Offices LLP,Customer Collection,2,1100,Accounts Receivable,0.00,100000.00,Bright Offices LLP,,
+JE-T051,T051,2025-08-20,REF-051,Van fuel and repairs,Other Operating,1,5108,Other Operating Expenses,12000.00,0.00,,18,TAXABLE
+JE-T051,T051,2025-08-20,REF-051,Van fuel and repairs,Other Operating,2,1400,Input GST Credit,2160.00,0.00,,18,TAXABLE
+JE-T051,T051,2025-08-20,REF-051,Van fuel and repairs,Other Operating,3,1002,Bank Account 1 - HDFC Current A/c,0.00,14160.00,Highway Auto Care,18,TAXABLE
+JE-T052,T052,2025-08-31,REF-052,Staff salaries for August 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T052,T052,2025-08-31,REF-052,Staff salaries for August 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T052,T052,2025-08-31,REF-052,Staff salaries for August 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T053,T053,2025-09-02,REF-053,Net salaries for August 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T053,T053,2025-09-02,REF-053,Net salaries for August 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T054,T054,2025-09-10,REF-054,Purchase of backpacks - paid by bank,Inventory Purchase,1,1200,Inventory,276000.00,0.00,,12,TAXABLE
+JE-T054,T054,2025-09-10,REF-054,Purchase of backpacks - paid by bank,Inventory Purchase,2,1400,Input GST Credit,33120.00,0.00,,12,TAXABLE
+JE-T054,T054,2025-09-10,REF-054,Purchase of backpacks - paid by bank,Inventory Purchase,3,1002,Bank Account 1 - HDFC Current A/c,0.00,309120.00,Urban Gear Pvt Ltd,12,TAXABLE
+JE-T055,T055,2025-09-12,CAP-003,Owner introduces additional capital for festive-season stock,Capital,1,1002,Bank Account 1 - HDFC Current A/c,500000.00,0.00,,,
+JE-T055,T055,2025-09-12,CAP-003,Owner introduces additional capital for festive-season stock,Capital,2,3001,Owner's Capital,0.00,500000.00,,,
+JE-T056,T056,2025-09-15,REF-056,Bank loan: principal instalment plus interest (principal reduces liability; interest is expense),Loan Repayment,1,2100,Bank Loan,100000.00,0.00,,,
+JE-T056,T056,2025-09-15,REF-056,Bank loan: principal instalment plus interest (principal reduces liability; interest is expense),Loan Repayment,2,5107,Interest Expense,39300.00,0.00,,,
+JE-T056,T056,2025-09-15,REF-056,Bank loan: principal instalment plus interest (principal reduces liability; interest is expense),Loan Repayment,3,1002,Bank Account 1 - HDFC Current A/c,0.00,139300.00,,,
+JE-T057,T057,2025-09-20,REF-057,Internet and phone charges - quarter,Utilities,1,5103,Utilities Expense,9000.00,0.00,,18,TAXABLE
+JE-T057,T057,2025-09-20,REF-057,Internet and phone charges - quarter,Utilities,2,1400,Input GST Credit,1620.00,0.00,,18,TAXABLE
+JE-T057,T057,2025-09-20,REF-057,Internet and phone charges - quarter,Utilities,3,1003,Bank Account 2 - ICICI Current A/c,0.00,10620.00,Airtel,18,TAXABLE
+JE-T058,T058,2025-09-30,REF-058,"Rent expense recognised for Jul-Sep from prepaid rent (3 x 22,000)",Prepaid Rent,1,5102,Rent Expense,66000.00,0.00,,,
+JE-T058,T058,2025-09-30,REF-058,"Rent expense recognised for Jul-Sep from prepaid rent (3 x 22,000)",Prepaid Rent,2,1300,Prepaid Rent,0.00,66000.00,,,
+JE-T059,T059,2025-09-30,REF-059,Depreciation for the quarter ended 30 September 2025,Depreciation,1,5105,Depreciation Expense,26339.73,0.00,,,
+JE-T059,T059,2025-09-30,REF-059,Depreciation for the quarter ended 30 September 2025,Depreciation,2,1601,Accumulated Depreciation - Furniture,0.00,3528.77,,,
+JE-T059,T059,2025-09-30,REF-059,Depreciation for the quarter ended 30 September 2025,Depreciation,3,1611,Accumulated Depreciation - Computers,0.00,9578.08,,,
+JE-T059,T059,2025-09-30,REF-059,Depreciation for the quarter ended 30 September 2025,Depreciation,4,1621,Accumulated Depreciation - Vehicle,0.00,13232.88,,,
+JE-T060,T060,2025-09-30,REF-060,Staff salaries for September 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T060,T060,2025-09-30,REF-060,Staff salaries for September 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T060,T060,2025-09-30,REF-060,Staff salaries for September 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T061,T061,2025-09-30,REF-061,Interest credited on Bank Account 1 balance,Interest Income,1,1002,Bank Account 1 - HDFC Current A/c,3400.00,0.00,,,
+JE-T061,T061,2025-09-30,REF-061,Interest credited on Bank Account 1 balance,Interest Income,2,4003,Interest Income,0.00,3400.00,,,
+JE-T062,T062,2025-10-01,REF-062,Net salaries for September 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T062,T062,2025-10-01,REF-062,Net salaries for September 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T063,T063,2025-10-05,REF-063,Festive-season stock of chargers on credit,Inventory Purchase,1,1200,Inventory,228000.00,0.00,,18,TAXABLE
+JE-T063,T063,2025-10-05,REF-063,Festive-season stock of chargers on credit,Inventory Purchase,2,1400,Input GST Credit,41040.00,0.00,,18,TAXABLE
+JE-T063,T063,2025-10-05,REF-063,Festive-season stock of chargers on credit,Inventory Purchase,3,2001,Accounts Payable,0.00,269040.00,Sharma Electronics,18,TAXABLE
+JE-T064,T064,2025-10-06,REF-064,Festive-season stock of LED lamps,Inventory Purchase,1,1200,Inventory,198000.00,0.00,,18,TAXABLE
+JE-T064,T064,2025-10-06,REF-064,Festive-season stock of LED lamps,Inventory Purchase,2,1400,Input GST Credit,35640.00,0.00,,18,TAXABLE
+JE-T064,T064,2025-10-06,REF-064,Festive-season stock of LED lamps,Inventory Purchase,3,1002,Bank Account 1 - HDFC Current A/c,0.00,233640.00,Bright Lights Co,18,TAXABLE
+JE-T065,T065,2025-10-12,REF-065,Diwali advertising campaign,Advertising,1,5104,Advertising Expense,60000.00,0.00,,18,TAXABLE
+JE-T065,T065,2025-10-12,REF-065,Diwali advertising campaign,Advertising,2,1400,Input GST Credit,10800.00,0.00,,18,TAXABLE
+JE-T065,T065,2025-10-12,REF-065,Diwali advertising campaign,Advertising,3,1003,Bank Account 2 - ICICI Current A/c,0.00,70800.00,AdReach Media,18,TAXABLE
+JE-T066,T066,2025-10-18,REF-066,Diwali sale of chargers - bank receipts,Sales,1,1003,Bank Account 2 - ICICI Current A/c,708000.00,0.00,Walk-in customers,18,TAXABLE
+JE-T066,T066,2025-10-18,REF-066,Diwali sale of chargers - bank receipts,Sales,2,4001,Sales Revenue,0.00,600000.00,,18,TAXABLE
+JE-T066,T066,2025-10-18,REF-066,Diwali sale of chargers - bank receipts,Sales,3,2200,Output GST Payable,0.00,108000.00,,18,TAXABLE
+JE-T066,T066,2025-10-18,REF-066,Diwali sale of chargers - bank receipts,Sales,4,5001,Cost of Goods Sold,341318.92,0.00,,18,TAXABLE
+JE-T066,T066,2025-10-18,REF-066,Diwali sale of chargers - bank receipts,Sales,5,1200,Inventory,0.00,341318.92,,18,TAXABLE
+JE-T067,T067,2025-10-20,REF-067,Corporate gifting order of backpacks on credit,Sales,1,1100,Accounts Receivable,380800.00,0.00,Corporate Gifts Co,12,TAXABLE
+JE-T067,T067,2025-10-20,REF-067,Corporate gifting order of backpacks on credit,Sales,2,4001,Sales Revenue,0.00,340000.00,,12,TAXABLE
+JE-T067,T067,2025-10-20,REF-067,Corporate gifting order of backpacks on credit,Sales,3,2200,Output GST Payable,0.00,40800.00,,12,TAXABLE
+JE-T067,T067,2025-10-20,REF-067,Corporate gifting order of backpacks on credit,Sales,4,5001,Cost of Goods Sold,182608.70,0.00,,12,TAXABLE
+JE-T067,T067,2025-10-20,REF-067,Corporate gifting order of backpacks on credit,Sales,5,1200,Inventory,0.00,182608.70,,12,TAXABLE
+JE-T068,T068,2025-10-22,REF-068,Diwali sale of LED lamps,Sales,1,1002,Bank Account 1 - HDFC Current A/c,690300.00,0.00,Walk-in customers,18,TAXABLE
+JE-T068,T068,2025-10-22,REF-068,Diwali sale of LED lamps,Sales,2,4001,Sales Revenue,0.00,585000.00,,18,TAXABLE
+JE-T068,T068,2025-10-22,REF-068,Diwali sale of LED lamps,Sales,3,2200,Output GST Payable,0.00,105300.00,,18,TAXABLE
+JE-T068,T068,2025-10-22,REF-068,Diwali sale of LED lamps,Sales,4,5001,Cost of Goods Sold,294642.86,0.00,,18,TAXABLE
+JE-T068,T068,2025-10-22,REF-068,Diwali sale of LED lamps,Sales,5,1200,Inventory,0.00,294642.86,,18,TAXABLE
+JE-T069,T069,2025-10-25,REF-069,Home delivery and installation charges - Diwali,Service Income,1,1003,Bank Account 2 - ICICI Current A/c,29500.00,0.00,Walk-in customers,18,TAXABLE
+JE-T069,T069,2025-10-25,REF-069,Home delivery and installation charges - Diwali,Service Income,2,4002,Service Income,0.00,25000.00,,18,TAXABLE
+JE-T069,T069,2025-10-25,REF-069,Home delivery and installation charges - Diwali,Service Income,3,2200,Output GST Payable,0.00,4500.00,,18,TAXABLE
+JE-T070,T070,2025-10-31,REF-070,Staff salaries for October 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T070,T070,2025-10-31,REF-070,Staff salaries for October 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T070,T070,2025-10-31,REF-070,Staff salaries for October 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T071,T071,2025-11-02,REF-071,Net salaries for October 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T071,T071,2025-11-02,REF-071,Net salaries for October 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T072,T072,2025-11-10,REF-072,Corporate Gifts Co pays its invoice,Customer Collection,1,1002,Bank Account 1 - HDFC Current A/c,380800.00,0.00,Corporate Gifts Co,,
+JE-T072,T072,2025-11-10,REF-072,Corporate Gifts Co pays its invoice,Customer Collection,2,1100,Accounts Receivable,0.00,380800.00,Corporate Gifts Co,,
+JE-T073,T073,2025-11-15,REF-073,Payment to Sharma Electronics,Supplier Payment,1,2001,Accounts Payable,269040.00,0.00,Sharma Electronics,,
+JE-T073,T073,2025-11-15,REF-073,Payment to Sharma Electronics,Supplier Payment,2,1002,Bank Account 1 - HDFC Current A/c,0.00,269040.00,Sharma Electronics,,
+JE-T074,T074,2025-11-20,REF-074,"GST return Jul-Oct: output GST set off against input credit, balance paid",GST Settlement,1,2200,Output GST Payable,296040.00,0.00,,,
+JE-T074,T074,2025-11-20,REF-074,"GST return Jul-Oct: output GST set off against input credit, balance paid",GST Settlement,2,1400,Input GST Credit,0.00,296040.00,,,
+JE-T075,T075,2025-11-25,REF-075,Cash sale of chargers,Sales,1,1001,Cash in Hand,175230.00,0.00,Walk-in customers,18,TAXABLE
+JE-T075,T075,2025-11-25,REF-075,Cash sale of chargers,Sales,2,4001,Sales Revenue,0.00,148500.00,,18,TAXABLE
+JE-T075,T075,2025-11-25,REF-075,Cash sale of chargers,Sales,3,2200,Output GST Payable,0.00,26730.00,,18,TAXABLE
+JE-T075,T075,2025-11-25,REF-075,Cash sale of chargers,Sales,4,5001,Cost of Goods Sold,85329.73,0.00,,18,TAXABLE
+JE-T075,T075,2025-11-25,REF-075,Cash sale of chargers,Sales,5,1200,Inventory,0.00,85329.73,,18,TAXABLE
+JE-T076,T076,2025-11-30,REF-076,Staff salaries for November 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T076,T076,2025-11-30,REF-076,Staff salaries for November 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T076,T076,2025-11-30,REF-076,Staff salaries for November 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T077,T077,2025-12-02,REF-077,Net salaries for November 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T077,T077,2025-12-02,REF-077,Net salaries for November 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T078,T078,2025-12-05,REF-078,Deposit of accumulated cash sales into Bank Account 1,Cash Deposit,1,1002,Bank Account 1 - HDFC Current A/c,350000.00,0.00,,,
+JE-T078,T078,2025-12-05,REF-078,Deposit of accumulated cash sales into Bank Account 1,Cash Deposit,2,1001,Cash in Hand,0.00,350000.00,,,
+JE-T079,T079,2025-12-10,REF-079,Sale of backpacks - winter travel,Sales,1,1002,Bank Account 1 - HDFC Current A/c,369600.00,0.00,Walk-in customers,12,TAXABLE
+JE-T079,T079,2025-12-10,REF-079,Sale of backpacks - winter travel,Sales,2,4001,Sales Revenue,0.00,330000.00,,12,TAXABLE
+JE-T079,T079,2025-12-10,REF-079,Sale of backpacks - winter travel,Sales,3,2200,Output GST Payable,0.00,39600.00,,12,TAXABLE
+JE-T079,T079,2025-12-10,REF-079,Sale of backpacks - winter travel,Sales,4,5001,Cost of Goods Sold,182608.69,0.00,,12,TAXABLE
+JE-T079,T079,2025-12-10,REF-079,Sale of backpacks - winter travel,Sales,5,1200,Inventory,0.00,182608.69,,12,TAXABLE
+JE-T080,T080,2025-12-15,REF-080,Bank loan: principal instalment plus interest,Loan Repayment,1,2100,Bank Loan,100000.00,0.00,,,
+JE-T080,T080,2025-12-15,REF-080,Bank loan: principal instalment plus interest,Loan Repayment,2,5107,Interest Expense,19200.00,0.00,,,
+JE-T080,T080,2025-12-15,REF-080,Bank loan: principal instalment plus interest,Loan Repayment,3,1002,Bank Account 1 - HDFC Current A/c,0.00,119200.00,,,
+JE-T081,T081,2025-12-20,REF-081,Kavita Traders repays part of loan with interest,Loan Recovery,1,1002,Bank Account 1 - HDFC Current A/c,54500.00,0.00,,,
+JE-T081,T081,2025-12-20,REF-081,Kavita Traders repays part of loan with interest,Loan Recovery,2,1500,Loan Given,0.00,50000.00,Kavita Traders,,
+JE-T081,T081,2025-12-20,REF-081,Kavita Traders repays part of loan with interest,Loan Recovery,3,4003,Interest Income,0.00,4500.00,,,
+JE-T082,T082,2025-12-31,REF-082,Rent expense recognised for Oct-Dec from prepaid rent,Prepaid Rent,1,5102,Rent Expense,66000.00,0.00,,,
+JE-T082,T082,2025-12-31,REF-082,Rent expense recognised for Oct-Dec from prepaid rent,Prepaid Rent,2,1300,Prepaid Rent,0.00,66000.00,,,
+JE-T083,T083,2025-12-31,REF-083,Depreciation for the quarter ended 31 December 2025,Depreciation,1,5105,Depreciation Expense,26339.73,0.00,,,
+JE-T083,T083,2025-12-31,REF-083,Depreciation for the quarter ended 31 December 2025,Depreciation,2,1601,Accumulated Depreciation - Furniture,0.00,3528.77,,,
+JE-T083,T083,2025-12-31,REF-083,Depreciation for the quarter ended 31 December 2025,Depreciation,3,1611,Accumulated Depreciation - Computers,0.00,9578.08,,,
+JE-T083,T083,2025-12-31,REF-083,Depreciation for the quarter ended 31 December 2025,Depreciation,4,1621,Accumulated Depreciation - Vehicle,0.00,13232.88,,,
+JE-T084,T084,2025-12-31,REF-084,Staff salaries for December 2025 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T084,T084,2025-12-31,REF-084,Staff salaries for December 2025 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T084,T084,2025-12-31,REF-084,Staff salaries for December 2025 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T085,T085,2026-01-02,REF-085,Net salaries for December 2025 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T085,T085,2026-01-02,REF-085,Net salaries for December 2025 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T086,T086,2026-01-10,REF-086,Electricity bill Jul-Dec (outside GST),Utilities,1,5103,Utilities Expense,24000.00,0.00,,0,NON_TAXABLE
+JE-T086,T086,2026-01-10,REF-086,Electricity bill Jul-Dec (outside GST),Utilities,2,1003,Bank Account 2 - ICICI Current A/c,0.00,24000.00,State Electricity Board,0,NON_TAXABLE
+JE-T087,T087,2026-01-15,REF-087,Sale of LED lamps - UPI,Sales,1,1003,Bank Account 2 - ICICI Current A/c,147500.00,0.00,Walk-in customers,18,TAXABLE
+JE-T087,T087,2026-01-15,REF-087,Sale of LED lamps - UPI,Sales,2,4001,Sales Revenue,0.00,125000.00,,18,TAXABLE
+JE-T087,T087,2026-01-15,REF-087,Sale of LED lamps - UPI,Sales,3,2200,Output GST Payable,0.00,22500.00,,18,TAXABLE
+JE-T087,T087,2026-01-15,REF-087,Sale of LED lamps - UPI,Sales,4,5001,Cost of Goods Sold,65476.19,0.00,,18,TAXABLE
+JE-T087,T087,2026-01-15,REF-087,Sale of LED lamps - UPI,Sales,5,1200,Inventory,0.00,65476.19,,18,TAXABLE
+JE-T088,T088,2026-01-18,REF-088,Free-of-GST educational workshop fee for school students (illustrative exempt supply),Service Income,1,1001,Cash in Hand,12000.00,0.00,Walk-in customers,0,EXEMPT
+JE-T088,T088,2026-01-18,REF-088,Free-of-GST educational workshop fee for school students (illustrative exempt supply),Service Income,2,4002,Service Income,0.00,12000.00,,0,EXEMPT
+JE-T089,T089,2026-01-20,REF-089,Collection from Bright Offices LLP - balance,Customer Collection,1,1002,Bank Account 1 - HDFC Current A/c,118380.00,0.00,Bright Offices LLP,,
+JE-T089,T089,2026-01-20,REF-089,Collection from Bright Offices LLP - balance,Customer Collection,2,1100,Accounts Receivable,0.00,118380.00,Bright Offices LLP,,
+JE-T090,T090,2026-01-22,REF-090,"GST return Nov-Dec: output GST set off against input credit, balance paid",GST Settlement,1,2200,Output GST Payable,88830.00,0.00,,,
+JE-T090,T090,2026-01-22,REF-090,"GST return Nov-Dec: output GST set off against input credit, balance paid",GST Settlement,2,1400,Input GST Credit,0.00,88830.00,,,
+JE-T091,T091,2026-01-25,REF-091,Purchase of backpacks for spring season on credit,Inventory Purchase,1,1200,Inventory,282000.00,0.00,,12,TAXABLE
+JE-T091,T091,2026-01-25,REF-091,Purchase of backpacks for spring season on credit,Inventory Purchase,2,1400,Input GST Credit,33840.00,0.00,,12,TAXABLE
+JE-T091,T091,2026-01-25,REF-091,Purchase of backpacks for spring season on credit,Inventory Purchase,3,2001,Accounts Payable,0.00,315840.00,Urban Gear Pvt Ltd,12,TAXABLE
+JE-T092,T092,2026-01-31,REF-092,Staff salaries for January 2026 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T092,T092,2026-01-31,REF-092,Staff salaries for January 2026 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T092,T092,2026-01-31,REF-092,Staff salaries for January 2026 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T093,T093,2026-02-02,REF-093,Net salaries for January 2026 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T093,T093,2026-02-02,REF-093,Net salaries for January 2026 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T094,T094,2026-02-10,REF-094,Bank charges - quarter,Bank Charges,1,5106,Bank Charges,2500.00,0.00,,18,TAXABLE
+JE-T094,T094,2026-02-10,REF-094,Bank charges - quarter,Bank Charges,2,1400,Input GST Credit,450.00,0.00,,18,TAXABLE
+JE-T094,T094,2026-02-10,REF-094,Bank charges - quarter,Bank Charges,3,1002,Bank Account 1 - HDFC Current A/c,0.00,2950.00,HDFC Bank,18,TAXABLE
+JE-T095,T095,2026-02-12,REF-095,Sale of backpacks - campus orders into Bank Account 2,Sales,1,1003,Bank Account 2 - ICICI Current A/c,369600.00,0.00,Walk-in customers,12,TAXABLE
+JE-T095,T095,2026-02-12,REF-095,Sale of backpacks - campus orders into Bank Account 2,Sales,2,4001,Sales Revenue,0.00,330000.00,,12,TAXABLE
+JE-T095,T095,2026-02-12,REF-095,Sale of backpacks - campus orders into Bank Account 2,Sales,3,2200,Output GST Payable,0.00,39600.00,,12,TAXABLE
+JE-T095,T095,2026-02-12,REF-095,Sale of backpacks - campus orders into Bank Account 2,Sales,4,5001,Cost of Goods Sold,187101.45,0.00,,12,TAXABLE
+JE-T095,T095,2026-02-12,REF-095,Sale of backpacks - campus orders into Bank Account 2,Sales,5,1200,Inventory,0.00,187101.45,,12,TAXABLE
+JE-T096,T096,2026-02-15,REF-096,Installation service income received in cash,Service Income,1,1001,Cash in Hand,21240.00,0.00,Walk-in customers,18,TAXABLE
+JE-T096,T096,2026-02-15,REF-096,Installation service income received in cash,Service Income,2,4002,Service Income,0.00,18000.00,,18,TAXABLE
+JE-T096,T096,2026-02-15,REF-096,Installation service income received in cash,Service Income,3,2200,Output GST Payable,0.00,3240.00,,18,TAXABLE
+JE-T097,T097,2026-02-18,REF-097,Bulk sale of chargers to a retail chain - bank receipt,Sales,1,1003,Bank Account 2 - ICICI Current A/c,177000.00,0.00,Walk-in customers,18,TAXABLE
+JE-T097,T097,2026-02-18,REF-097,Bulk sale of chargers to a retail chain - bank receipt,Sales,2,4001,Sales Revenue,0.00,150000.00,,18,TAXABLE
+JE-T097,T097,2026-02-18,REF-097,Bulk sale of chargers to a retail chain - bank receipt,Sales,3,2200,Output GST Payable,0.00,27000.00,,18,TAXABLE
+JE-T097,T097,2026-02-18,REF-097,Bulk sale of chargers to a retail chain - bank receipt,Sales,4,5001,Cost of Goods Sold,85329.73,0.00,,18,TAXABLE
+JE-T097,T097,2026-02-18,REF-097,Bulk sale of chargers to a retail chain - bank receipt,Sales,5,1200,Inventory,0.00,85329.73,,18,TAXABLE
+JE-T098,T098,2026-02-20,REF-098,Deposit of TDS/PF withheld Jun-Jan,Payroll,1,2300,TDS and PF Payable,18000.00,0.00,,,
+JE-T098,T098,2026-02-20,REF-098,Deposit of TDS/PF withheld Jun-Jan,Payroll,2,1002,Bank Account 1 - HDFC Current A/c,0.00,18000.00,,,
+JE-T099,T099,2026-02-20,REF-099,GST return for January: output GST set off against input credit (Feb-Mar returns fall due after year-end),GST Settlement,1,2200,Output GST Payable,69840.00,0.00,,,
+JE-T099,T099,2026-02-20,REF-099,GST return for January: output GST set off against input credit (Feb-Mar returns fall due after year-end),GST Settlement,2,1400,Input GST Credit,0.00,66840.00,,,
+JE-T099,T099,2026-02-20,REF-099,GST return for January: output GST set off against input credit (Feb-Mar returns fall due after year-end),GST Settlement,3,1002,Bank Account 1 - HDFC Current A/c,0.00,3000.00,,,
+JE-T100,T100,2026-02-28,REF-100,Staff salaries for February 2026 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T100,T100,2026-02-28,REF-100,Staff salaries for February 2026 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T100,T100,2026-02-28,REF-100,Staff salaries for February 2026 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,
+JE-T101,T101,2026-03-02,REF-101,Net salaries for February 2026 paid to staff,Payroll,1,2002,Salaries Payable,37000.00,0.00,,,
+JE-T101,T101,2026-03-02,REF-101,Net salaries for February 2026 paid to staff,Payroll,2,1003,Bank Account 2 - ICICI Current A/c,0.00,37000.00,,,
+JE-T102,T102,2026-03-05,REF-102,Credit sale of backpacks to Bright Offices LLP,Sales,1,1100,Accounts Receivable,277200.00,0.00,Bright Offices LLP,12,TAXABLE
+JE-T102,T102,2026-03-05,REF-102,Credit sale of backpacks to Bright Offices LLP,Sales,2,4001,Sales Revenue,0.00,247500.00,,12,TAXABLE
+JE-T102,T102,2026-03-05,REF-102,Credit sale of backpacks to Bright Offices LLP,Sales,3,2200,Output GST Payable,0.00,29700.00,,12,TAXABLE
+JE-T102,T102,2026-03-05,REF-102,Credit sale of backpacks to Bright Offices LLP,Sales,4,5001,Cost of Goods Sold,140326.09,0.00,,12,TAXABLE
+JE-T102,T102,2026-03-05,REF-102,Credit sale of backpacks to Bright Offices LLP,Sales,5,1200,Inventory,0.00,140326.09,,12,TAXABLE
+JE-T103,T103,2026-03-08,REF-103,Payment to Urban Gear Pvt Ltd for January purchase,Supplier Payment,1,2001,Accounts Payable,315840.00,0.00,Urban Gear Pvt Ltd,,
+JE-T103,T103,2026-03-08,REF-103,Payment to Urban Gear Pvt Ltd for January purchase,Supplier Payment,2,1002,Bank Account 1 - HDFC Current A/c,0.00,315840.00,Urban Gear Pvt Ltd,,
+JE-T104,T104,2026-03-10,REF-104,Transfer surplus from Bank Account 2 to Bank Account 1,Bank Transfer,1,1002,Bank Account 1 - HDFC Current A/c,200000.00,0.00,,,
+JE-T104,T104,2026-03-10,REF-104,Transfer surplus from Bank Account 2 to Bank Account 1,Bank Transfer,2,1003,Bank Account 2 - ICICI Current A/c,0.00,200000.00,,,
+JE-T105,T105,2026-03-12,REF-105,Restocking chargers on credit (payable at year-end),Inventory Purchase,1,1200,Inventory,118000.00,0.00,,18,TAXABLE
+JE-T105,T105,2026-03-12,REF-105,Restocking chargers on credit (payable at year-end),Inventory Purchase,2,1400,Input GST Credit,21240.00,0.00,,18,TAXABLE
+JE-T105,T105,2026-03-12,REF-105,Restocking chargers on credit (payable at year-end),Inventory Purchase,3,2001,Accounts Payable,0.00,139240.00,Sharma Electronics,18,TAXABLE
+JE-T106,T106,2026-03-15,REF-106,Bank loan: principal instalment plus interest,Loan Repayment,1,2100,Bank Loan,100000.00,0.00,,,
+JE-T106,T106,2026-03-15,REF-106,Bank loan: principal instalment plus interest,Loan Repayment,2,5107,Interest Expense,15500.00,0.00,,,
+JE-T106,T106,2026-03-15,REF-106,Bank loan: principal instalment plus interest,Loan Repayment,3,1002,Bank Account 1 - HDFC Current A/c,0.00,115500.00,,,
+JE-T107,T107,2026-03-31,REF-107,"Year-end accrual: interest earned on loan to Kavita Traders (Jan-Mar), not yet received",Year-end Adjustment,1,1150,Accrued Interest Receivable,2100.00,0.00,,,
+JE-T107,T107,2026-03-31,REF-107,"Year-end accrual: interest earned on loan to Kavita Traders (Jan-Mar), not yet received",Year-end Adjustment,2,4003,Interest Income,0.00,2100.00,,,
+JE-T108,T108,2026-03-31,REF-108,"Year-end accrual: bank loan interest for 16-31 Mar, due in next instalment",Year-end Adjustment,1,5107,Interest Expense,3200.00,0.00,,,
+JE-T108,T108,2026-03-31,REF-108,"Year-end accrual: bank loan interest for 16-31 Mar, due in next instalment",Year-end Adjustment,2,2400,Accrued Expenses,0.00,3200.00,,,
+JE-T109,T109,2026-03-31,REF-109,Rent expense recognised for Jan-Mar from prepaid rent,Prepaid Rent,1,5102,Rent Expense,66000.00,0.00,,,
+JE-T109,T109,2026-03-31,REF-109,Rent expense recognised for Jan-Mar from prepaid rent,Prepaid Rent,2,1300,Prepaid Rent,0.00,66000.00,,,
+JE-T110,T110,2026-03-31,REF-110,Year-end depreciation for the quarter ended 31 March 2026,Depreciation,1,5105,Depreciation Expense,25767.12,0.00,,,
+JE-T110,T110,2026-03-31,REF-110,Year-end depreciation for the quarter ended 31 March 2026,Depreciation,2,1601,Accumulated Depreciation - Furniture,0.00,3452.05,,,
+JE-T110,T110,2026-03-31,REF-110,Year-end depreciation for the quarter ended 31 March 2026,Depreciation,3,1611,Accumulated Depreciation - Computers,0.00,9369.86,,,
+JE-T110,T110,2026-03-31,REF-110,Year-end depreciation for the quarter ended 31 March 2026,Depreciation,4,1621,Accumulated Depreciation - Vehicle,0.00,12945.21,,,
+JE-T111,T111,2026-03-31,REF-111,Staff salaries for March 2026 (gross; TDS/PF withheld),Payroll,1,5101,Salaries Expense,40000.00,0.00,,,
+JE-T111,T111,2026-03-31,REF-111,Staff salaries for March 2026 (gross; TDS/PF withheld),Payroll,2,2002,Salaries Payable,0.00,37000.00,,,
+JE-T111,T111,2026-03-31,REF-111,Staff salaries for March 2026 (gross; TDS/PF withheld),Payroll,3,2300,TDS and PF Payable,0.00,3000.00,,,

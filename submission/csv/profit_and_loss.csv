@@ -1,0 +1,22 @@
+line_type,account_code,description,amount_inr
+heading,,INCOME,
+line,4001,Sales Revenue,3685000.00
+line,4002,Service Income,95000.00
+line,4003,Interest Income,13100.00
+subtotal,,Total Income,3793100.00
+heading,,COST OF GOODS SOLD,
+line,5001,Cost of Goods Sold,2018042.36
+subtotal,,Gross Profit (Sales + Service Income - Cost of Goods Sold),1761957.64
+heading,,OPERATING EXPENSES,
+line,5101,Salaries Expense,480000.00
+line,5102,Rent Expense,264000.00
+line,5103,Utilities Expense,58500.00
+line,5104,Advertising Expense,125000.00
+line,5106,Bank Charges,4500.00
+line,5108,Other Operating Expenses,12000.00
+subtotal,,Total Operating Expenses,944000.00
+heading,,OTHER EXPENSES,
+line,5105,Depreciation Expense,103391.78
+line,5107,Interest Expense,77200.00
+subtotal,,Total Expenses (COGS + Operating + Depreciation + Interest),3142634.14
+total,,NET PROFIT (Total Income - Total Expenses),650465.86

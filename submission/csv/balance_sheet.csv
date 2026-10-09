@@ -1,0 +1,44 @@
+line_type,account_code,description,amount_inr
+heading,,ASSETS,
+heading,,Current Assets,
+line,1001,Cash in Hand,120540.00
+line,1002,Bank Account 1 - HDFC Current A/c,1589510.00
+line,1003,Bank Account 2 - ICICI Current A/c,1434450.00
+line,1100,Accounts Receivable,277200.00
+line,1150,Accrued Interest Receivable,2100.00
+line,1200,Inventory,193957.64
+line,1300,Prepaid Rent,66000.00
+line,1400,Input GST Credit,21240.00
+subtotal,,Total Current Assets,3704997.64
+heading,,Loans Given,
+line,1500,Loan Given,100000.00
+subtotal,,Total Loans Given,100000.00
+heading,,Fixed Assets (at cost less accumulated depreciation),
+line,1600,Furniture and Fixtures,150000.00
+line,1610,Computer Equipment,120000.00
+line,1620,Delivery Vehicle,500000.00
+subtotal,,Fixed assets at original cost,770000.00
+line,1601,Accumulated Depreciation - Furniture,-13923.29
+line,1611,Accumulated Depreciation - Computers,-37687.66
+line,1621,Accumulated Depreciation - Vehicle,-51780.83
+subtotal,,Net Fixed Assets,666608.22
+total,,TOTAL ASSETS,4471605.86
+heading,,LIABILITIES,
+heading,,Current Liabilities,
+line,2001,Accounts Payable,139240.00
+line,2002,Salaries Payable,37000.00
+line,2200,Output GST Payable,29700.00
+line,2300,TDS and PF Payable,12000.00
+line,2400,Accrued Expenses,3200.00
+subtotal,,Total Current Liabilities,221140.00
+heading,,Loan Liabilities,
+line,2100,Bank Loan,500000.00
+subtotal,,Total Loan Liabilities,500000.00
+total,,TOTAL LIABILITIES,721140.00
+heading,,EQUITY,
+line,3001,Owner's Capital,3100000.00
+line,3002,Retained Earnings / Opening Equity (incl. prior-period profit),0.00
+line,3003,Current-Year Profit or Loss,650465.86
+total,,TOTAL EQUITY,3750465.86
+total,,TOTAL LIABILITIES AND EQUITY,4471605.86
+memo,,BALANCE SHEET DIFFERENCE (Assets - Liabilities - Equity),0.00

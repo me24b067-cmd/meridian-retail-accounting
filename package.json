@@ -1,0 +1,38 @@
+{
+  "name": "meridian-retail-accounting",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Double-entry accounting software for Meridian Retail Traders (educational demo)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "generate:submission": "tsx --tsconfig tsconfig.json scripts/generate-submission.ts",
+    "db:migrate": "tsx --tsconfig tsconfig.json scripts/migrate.ts"
+  },
+  "dependencies": {
+    "decimal.js": "^10.6.0",
+    "exceljs": "^4.4.0",
+    "next": "^16.4.0",
+    "papaparse": "^5.7.0",
+    "pg": "^8.23.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "recharts": "^3.10.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.4",
+    "@types/papaparse": "^5.5.2",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
+  }
+}
